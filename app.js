@@ -18,17 +18,15 @@ function draw(e) {
     return //this stops the function from running when they are not moused down
   }
   console.log(e);
+  ctx.beginPath()
+  ctx.moveTo(lastX, lastY)
+  ctx.lineTo(e.offsetX, e.offsetY)
+  ctx.stroke()
 }
 
 canvas.addEventListener('mousemove', draw)
-canvas.addEventListener('mousedown', () => {
-  isDrawing = true
-})
-canvas.addEventListener('mouseup', () => {
-  isDrawing = false
-})
-canvas.addEventListener('mouseout', () => {
-  isDrawing = false
-})
+canvas.addEventListener('mousedown', () => isDrawing = true)
+canvas.addEventListener('mouseup', () => isDrawing = false)
+canvas.addEventListener('mouseout', () => isDrawing = false)
 
 }
