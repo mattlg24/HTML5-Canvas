@@ -5,7 +5,7 @@ window.onload = function() {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
-    ctx.strokeStyle = '#BADA55'
+    // ctx.strokeStyle = '#BADA55'
     ctx.lineJoin = 'round'
     ctx.lineCap = 'round'
     ctx.lineWidth = 50
